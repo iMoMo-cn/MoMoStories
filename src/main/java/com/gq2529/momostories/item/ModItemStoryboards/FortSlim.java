@@ -24,7 +24,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//斯利姆堡
 public class FortSlim extends CardBase
 {
     public FortSlim(String name)
@@ -54,7 +53,6 @@ public class FortSlim extends CardBase
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
     {
-        //判断物品和服务端
         if (this == ModItems.FORT_SLIM && !world.isRemote)
         {
             int a = (int) player.getHealth();
@@ -71,10 +69,8 @@ public class FortSlim extends CardBase
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.fort_slim_3").getFormattedText());
         }
         else

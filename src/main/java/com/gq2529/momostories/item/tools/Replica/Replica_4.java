@@ -25,7 +25,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.UUID;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//复制品7门板
 public class Replica_4  extends ItemBase {
     private double attackDamage;
 

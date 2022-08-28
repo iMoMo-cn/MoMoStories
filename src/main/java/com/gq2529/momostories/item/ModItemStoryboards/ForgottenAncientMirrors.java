@@ -12,7 +12,6 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-//被遗忘的古镜
 public class ForgottenAncientMirrors extends CardBase
 {
     static String key;
@@ -27,10 +26,8 @@ public class ForgottenAncientMirrors extends CardBase
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.forgotten_ancient_mirrors_3").getFormattedText());
         }
         else

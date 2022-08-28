@@ -17,7 +17,6 @@ import org.lwjgl.input.Keyboard;
 
 import javax.annotation.Nonnull;
 import java.util.List;
-//晴天
 public class Fine extends CardBase
 {
     static String key;
@@ -43,15 +42,12 @@ public class Fine extends CardBase
         }
         return super.onItemRightClick(world, player, hand);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
        // tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.fine_1").getFormattedText());
         tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.fine_2").getFormattedText());
         }

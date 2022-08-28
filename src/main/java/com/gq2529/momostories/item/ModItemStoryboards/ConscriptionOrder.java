@@ -32,7 +32,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//强制征兵令
 public class ConscriptionOrder extends CardBase {
     public ConscriptionOrder(String name) {
         super(name);
@@ -76,15 +75,12 @@ public class ConscriptionOrder extends CardBase {
         }
     }
 
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.the_supreme").getFormattedText());
         }
         else

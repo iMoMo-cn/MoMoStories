@@ -36,7 +36,6 @@ import java.util.Random;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 
-//复制品2长枪
 public class Replica_2 extends Item implements IHasModel
 {
 	private final float attackDamage;

@@ -21,7 +21,6 @@ import org.lwjgl.input.Keyboard;
 import java.util.List;
 import java.util.Random;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//扭曲
 public class Twist extends CardBase
 {
     public Twist(String name)
@@ -31,14 +30,11 @@ public class Twist extends CardBase
         setMaxStackSize(1);
         setContainerItem(this);
     }
-    //效果
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void TWIST(LivingHurtEvent event) {
         World world = event.getEntity().world;
         if (!world.isRemote) {
-            //被打的
             EntityLivingBase hurt = event.getEntityLiving();
-            //打人的（玩家）
             EntityLivingBase attacker = (EntityLivingBase) event.getSource().getTrueSource();
             if (attacker instanceof EntityPlayer) {
                 EntityPlayer Player = (EntityPlayer) attacker;
@@ -57,15 +53,12 @@ public class Twist extends CardBase
             }
         }
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.twist_2").getFormattedText());
         }
              else

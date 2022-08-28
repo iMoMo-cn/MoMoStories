@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.UUID;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//洁白之羽
 public class WhiteFeathers  extends ItemBase {
     private double attackDamage;
     private static final ToolMaterial material = EnumHelper.addToolMaterial("boundless_material",5,2000,15,1,20);

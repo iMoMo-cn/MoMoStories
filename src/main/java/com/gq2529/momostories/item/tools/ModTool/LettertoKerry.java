@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.List;
-//寄往坎瑞的信件
 public class LettertoKerry extends ItemBase {
     public LettertoKerry(String name) {
         super(name);
@@ -17,12 +16,10 @@ public class LettertoKerry extends ItemBase {
         setMaxStackSize(1);
         setCreativeTab(ModCreativeTab.TAB_NAME_4);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-            //第一行，以此类推
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.LettertoKerry").getFormattedText());
 
     }

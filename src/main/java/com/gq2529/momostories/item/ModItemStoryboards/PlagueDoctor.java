@@ -69,15 +69,12 @@ public class PlagueDoctor extends CardBase {
         }
     }
 
-            //工具文本
             @Override
             @SideOnly(Side.CLIENT)
             public void addInformation (ItemStack stack, World player, List < String > tooltip, ITooltipFlag
             advanced)
             {
-                //shift文本显示
                 if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-                    //第一行，以此类推
                     tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.plague_doctor_4").getFormattedText());
                 } else {
                     tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.tishi").getFormattedText());

@@ -19,7 +19,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 
 
-//复制品3稿子
 public class Replica_3  extends ItemPickaxe implements IHasModel {
     private static final Item.ToolMaterial BOUNDLESS_MATERIAL = EnumHelper.addToolMaterial("boundless_material", 5, -1, 18.0F, 5, 9);
 

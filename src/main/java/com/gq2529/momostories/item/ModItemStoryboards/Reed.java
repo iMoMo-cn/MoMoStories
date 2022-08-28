@@ -46,10 +46,8 @@ public class Reed extends CardBase {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.reed_1").getFormattedText());
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.reed_2").getFormattedText());
         }

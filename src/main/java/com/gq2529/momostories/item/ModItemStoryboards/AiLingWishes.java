@@ -18,7 +18,6 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//艾玲的祝愿
 public class AiLingWishes extends CardBase
 {
     public AiLingWishes(String name)

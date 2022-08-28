@@ -17,7 +17,6 @@ import net.minecraftforge.items.IItemHandler;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
-//新生
 public class Freshman extends CardBase {
     private ItemStack oldStack;
     private ItemStack newStack;
@@ -28,7 +27,6 @@ public class Freshman extends CardBase {
         setCreativeTab(ModCreativeTab.TAB_NAME);
     }
 
-    //维修
     @Override
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
         if (!stack.hasTagCompound()) {
@@ -52,10 +50,8 @@ public class Freshman extends CardBase {
             if (invStack.isEmpty() || !invStack.getItem().isRepairable()) {
                 continue;
             }
-            //每秒一耐久
             if (worldIn.getWorldTime() % 20 == 1) {
                 if (invStack != player.getItemStackFromSlot(EntityEquipmentSlot.MAINHAND) && invStack != player.getItemStackFromSlot(EntityEquipmentSlot.OFFHAND) || !player.isSwingInProgress) {
-                    //获取物品耐久损害
                     if (!invStack.getHasSubtypes() && invStack.getMaxDamage() != 0 && invStack.getItemDamage() > 0)
                         invStack.setItemDamage(invStack.getItemDamage() - 1);
                 }
@@ -75,13 +71,10 @@ public class Freshman extends CardBase {
         }
         return super.shouldCauseReequipAnimation(oldStack, newStack, slotChanged);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-        //shift文本显示
         if (org.lwjgl.input.Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.freshman_4").getFormattedText());
         } else {
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.tishi").getFormattedText());

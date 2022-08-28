@@ -28,7 +28,6 @@ import java.util.List;
 import static net.minecraft.init.MobEffects.BLINDNESS;
 
 
-//奥哈姆重骑兵团
 public class OhamHeavyCavalryRegiment extends CardBase
 {
     public OhamHeavyCavalryRegiment(String name)
@@ -38,7 +37,6 @@ public class OhamHeavyCavalryRegiment extends CardBase
         setMaxStackSize(1);
         setCreativeTab(ModCreativeTab.TAB_NAME_2);
     }
-    //给BUFF
     @Override
     public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected)
     {
@@ -52,12 +50,12 @@ public class OhamHeavyCavalryRegiment extends CardBase
          }
     }
 
-   /* 测试
+   /*
    @Nonnull
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
     {
-        //判断物品和服务端
+
         if (this == ModItems.OHAM_HEAVY_CAVALRY_REGIMENT && !world.isRemote)
         {
           player.setGameType(GameType.CREATIVE);
@@ -68,15 +66,13 @@ public class OhamHeavyCavalryRegiment extends CardBase
         }
         return super.onItemRightClick(world, player, hand);
     }*/
-    //工具文本
+
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
         tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.oham_heavy_cavalry_regiment_2").getFormattedText());
         }
         else

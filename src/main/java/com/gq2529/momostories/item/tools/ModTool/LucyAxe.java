@@ -22,7 +22,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-//露西斧
 public class LucyAxe extends ItemAxe implements IHasModel
 {
     private static final ToolMaterial BOUNDLESS_MATERIAL = EnumHelper.addToolMaterial("boundless_material",5,2000,15,1,9);
@@ -42,7 +41,6 @@ public class LucyAxe extends ItemAxe implements IHasModel
         MoMoFramework.proxy.registerItemRenderer(this, 0, "inventory");
 
     }
-    //随机文本
     @Override
     @Nonnull
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand) {
@@ -52,7 +50,6 @@ public class LucyAxe extends ItemAxe implements IHasModel
         }
         return super.onItemRightClick(world, player, hand);
     }
-    //禁止附魔
     public boolean isBookEnchantable(ItemStack stack, ItemStack book)
     {
         return false;
@@ -60,7 +57,6 @@ public class LucyAxe extends ItemAxe implements IHasModel
 
     public boolean isEnchantable(ItemStack stack) { return false; }
 
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)

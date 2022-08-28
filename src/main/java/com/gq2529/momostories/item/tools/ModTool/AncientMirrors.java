@@ -17,7 +17,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-//古镜
 public class AncientMirrors extends CardBase
 {
     public AncientMirrors(String name)
@@ -25,7 +24,6 @@ public class AncientMirrors extends CardBase
         super(name);
         setCreativeTab(ModCreativeTab.TAB_NAME_4);
     }
-    //复制物品
     @Nonnull
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand)
@@ -34,12 +32,9 @@ public class AncientMirrors extends CardBase
         {
             if (this == ModItems.ANCIENT_MIRRORS)
             {
-                //获取副手物品
                 ItemStack a = player.getHeldItemOffhand();
                 ItemStack item = player.getHeldItem(hand);
-                //复制
                 ItemStack B = a.copy();
-                //掉落物形式
                 world.spawnEntity(new EntityItem(world,player.posX,player.posY,player.posZ,B));
                 item.setCount(item.getCount() - 1);
 
@@ -47,15 +42,12 @@ public class AncientMirrors extends CardBase
         }
         return super.onItemRightClick(world, player, hand);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.ancient_mirrors_1").getFormattedText());
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.ancient_mirrors_2").getFormattedText());
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.ancient_mirrors_3").getFormattedText());

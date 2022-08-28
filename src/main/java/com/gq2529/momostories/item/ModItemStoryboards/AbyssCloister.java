@@ -13,21 +13,17 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-//深渊回廊
 public class AbyssCloister extends CardBase {
     public AbyssCloister(String name) {
         super(name);
         setCreativeTab(ModCreativeTab.TAB_NAME_1);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.abyss_cloister").getFormattedText());
         }
         else

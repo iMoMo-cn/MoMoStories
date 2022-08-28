@@ -26,7 +26,6 @@ import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 
-//复制品1剑
 public class Replica_1 extends ItemSword implements IHasModel {
     private static final Item.ToolMaterial BOUNDLESS_MATERIAL = EnumHelper.addToolMaterial("boundless_material", 5, -1, 8, 4, 9);
 

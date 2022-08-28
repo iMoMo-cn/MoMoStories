@@ -21,7 +21,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-//炼金术士徽章
 public class AlchemistMedal extends CardBase {
     public AlchemistMedal(String name) {
         super(name);
@@ -55,15 +54,12 @@ public class AlchemistMedal extends CardBase {
         return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
     }
 
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.alchemist_medal").getFormattedText());
         }
         else

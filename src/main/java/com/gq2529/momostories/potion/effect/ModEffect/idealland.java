@@ -24,9 +24,9 @@ public class idealland extends PotionBase {
         EntityPlayer o = (EntityPlayer) entityLivingBaseIn;
         if (this == IDEALLAND)
         {
-            o.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 200, 255));//缓慢
-            o.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 200, 2));//吸收
-            o.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 200, 4));//回血
+            o.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 200, 255));
+            o.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 200, 2));
+            o.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 200, 4));
 
         }
     }

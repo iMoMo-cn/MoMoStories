@@ -21,7 +21,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
-//艾斯德斯
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class Estes extends CardBase implements IJumpBoost {
     public Estes(String name) {
@@ -71,15 +70,12 @@ public class Estes extends CardBase implements IJumpBoost {
 
 
 
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.estes").getFormattedText());
         } else
         {

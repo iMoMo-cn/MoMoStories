@@ -18,8 +18,6 @@ public abstract class CardJump extends ItemBase {
         setUnlocalizedName(name);
         setMaxStackSize(1);
     }
-    //检测shift
-
     public static void addInfo(ItemStack stack, List<String> list)
     {
         if (I18n.hasKey(key +" .desc"))
@@ -31,8 +29,4 @@ public abstract class CardJump extends ItemBase {
             }
         }
     }
-
-
-    @SideOnly(Side.CLIENT)
-    public abstract void clientWornTick(ItemStack stack, EntityLivingBase player);
 }

@@ -18,7 +18,7 @@ import java.util.List;
 
 public final class Timemanagement {
 
-	private Timemanagement(){} // No instances!
+	private Timemanagement(){}
 
 	private static final EntityEquipmentSlot[] ARMOUR_SLOTS;
 
@@ -36,9 +36,7 @@ public final class Timemanagement {
 
 	public static List<ItemStack> getPrioritisedHotbarAndOffhand(EntityPlayer player){
 		List<ItemStack> hotbar = getHotbar(player);
-		// Adds the offhand item to the beginning of the list so it is processed before the hotbar
 		hotbar.add(0, player.getHeldItemOffhand());
-		// Moves the item in the main hand to the beginning of the list so it is processed first
 		hotbar.remove(player.getHeldItemMainhand());
 		hotbar.add(0, player.getHeldItemMainhand());
 		return hotbar;
@@ -89,7 +87,6 @@ public final class Timemanagement {
 				&& ItemStack.areItemStackTagsEqual(stack1, stack2);
 	}
 	public static boolean replaceItemInInventory(Entity entity, int slot, ItemStack original, ItemStack replacement){
-		// Check slots that aren't in the main inventory first by comparing with the existing item
 		if(entity instanceof EntityLivingBase){
 			for(EntityEquipmentSlot eslot : EntityEquipmentSlot.values()){
 				if(((EntityLivingBase)entity).getItemStackFromSlot(eslot) == original){

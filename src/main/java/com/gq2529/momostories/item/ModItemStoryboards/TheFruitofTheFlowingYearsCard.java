@@ -10,7 +10,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import java.util.List;
-//岁月之果卡牌
 public class TheFruitofTheFlowingYearsCard extends ItemBase
 {
     public TheFruitofTheFlowingYearsCard(String name)
@@ -19,15 +18,12 @@ public class TheFruitofTheFlowingYearsCard extends ItemBase
         setMaxStackSize(1);
         setCreativeTab(ModCreativeTab.TAB_NAME);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
         tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.the_fruit_of_the_flowing_years_card_1").getFormattedText());
         }
         else

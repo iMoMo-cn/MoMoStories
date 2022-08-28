@@ -23,7 +23,6 @@ import static com.gq2529.momostories.util.Reference.MOD_ID;
 @Mod(modid = MoMoFramework.MODID,
         name = MoMoFramework.NAME,
         version = MoMoFramework.VERSION
-       // dependencies = "required-after:baubles;"
         )
 
 

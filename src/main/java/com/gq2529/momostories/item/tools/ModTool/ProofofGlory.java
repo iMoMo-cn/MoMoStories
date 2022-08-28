@@ -23,7 +23,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import java.util.List;
 import java.util.UUID;
-//荣耀之证
 public class ProofofGlory extends ItemShieldBase {
     public ProofofGlory(String name) {
         super(name, -1);
@@ -47,10 +46,8 @@ public class ProofofGlory extends ItemShieldBase {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.proof_of_glory_1").getFormattedText());
         }
         else

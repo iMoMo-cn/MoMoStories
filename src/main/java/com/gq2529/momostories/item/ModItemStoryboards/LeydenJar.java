@@ -20,7 +20,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//莱顿瓶
 public class LeydenJar extends CardBase
 {
     static String key;
@@ -53,15 +52,12 @@ public class LeydenJar extends CardBase
             }
         }
     }
-    //工具文本提示
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.LeydenJar_3").getFormattedText());
         }
         else

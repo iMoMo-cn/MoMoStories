@@ -13,7 +13,6 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-//太阳神教
 public class ChurchoftheSunGod extends CardBase
 {
     static String key;
@@ -23,15 +22,12 @@ public class ChurchoftheSunGod extends CardBase
         setCreativeTab(ModCreativeTab.TAB_NAME_2);
         setMaxStackSize(1);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
         tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.church_of_the_sun_god_2").getFormattedText());
         } else
         {

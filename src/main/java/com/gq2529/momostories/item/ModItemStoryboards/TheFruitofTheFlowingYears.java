@@ -18,7 +18,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-//岁月之果
 public class TheFruitofTheFlowingYears extends CardBase
 {
     public TheFruitofTheFlowingYears(String name)
@@ -38,12 +37,10 @@ public class TheFruitofTheFlowingYears extends CardBase
         {
            if (this == ModItems.THE_FRUIT_OF_THE_FLOWING_YEARS)
            {
-               //总数
                int sum = 0;
                for (int i = 0; i < player.inventory.getSizeInventory(); ++i)
                {
                    ItemStack itemStack = player.inventory.getStackInSlot(i);
-                   //苹果转换
                    if (itemStack.getItem() == Items.APPLE) {
                        int num = itemStack.getCount();
                        if(sum < 16 && num <= 16 - sum)
@@ -58,7 +55,6 @@ public class TheFruitofTheFlowingYears extends CardBase
                            break;
                        }
                    }
-                   //龙息转换
                    if (itemStack.getItem() == Items.DRAGON_BREATH)
                    {
                        int num = itemStack.getCount();
@@ -74,7 +70,6 @@ public class TheFruitofTheFlowingYears extends CardBase
                            break;
                        }
                    }
-//                   //头颅转换,废稿
 //                   if (itemStack.getItem() == Items.SKULL)
 //                   {
 //                       itemStack.shrink(1);
@@ -84,15 +79,12 @@ public class TheFruitofTheFlowingYears extends CardBase
         }
         return super.onItemRightClick(world, player, handIn);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
         tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.year_2").getFormattedText());
         }
         else

@@ -16,7 +16,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-//普通的锤子
 public class OrdinaryHammer extends ItemPickaxe implements IHasModel {
 
     public OrdinaryHammer(String name, ToolMaterial material) {

@@ -34,7 +34,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nullable;
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//月神狩猎
 public class LunaHunting extends ItemBow implements IHasModel {
     static String key;
 
@@ -61,7 +60,6 @@ public class LunaHunting extends ItemBow implements IHasModel {
 
 
 
-    //框架特有
     @Override
     public void registerModels() {
         MoMoFramework.proxy.registerItemRenderer(this, 0, "inventory");
@@ -85,7 +83,6 @@ public class LunaHunting extends ItemBow implements IHasModel {
             }
         }
     }
-    //晚上不消耗箭矢
     private ItemStack findAmmo(EntityPlayer player) {
         if (this.isArrow(player.getHeldItem(EnumHand.OFF_HAND))) {
             return player.getHeldItem(EnumHand.OFF_HAND);
@@ -103,7 +100,6 @@ public class LunaHunting extends ItemBow implements IHasModel {
         }
     }
 
-    //能看懂看吧，作者这块写的也迷糊
     public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft) {
         if (entityLiving instanceof EntityPlayer) {
             EntityPlayer entityplayer = (EntityPlayer) entityLiving;
@@ -180,9 +176,7 @@ public class LunaHunting extends ItemBow implements IHasModel {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced) {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-            //第一行，以此类推
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.luna_hunting_1").getFormattedText());
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.luna_hunting_2").getFormattedText());
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.luna_hunting_3").getFormattedText());

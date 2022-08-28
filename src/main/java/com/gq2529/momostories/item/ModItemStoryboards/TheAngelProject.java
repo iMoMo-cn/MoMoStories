@@ -23,7 +23,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//天使计划
 public class TheAngelProject extends CardBase implements IJumpBoost {
     public TheAngelProject(String name) {
         super(name);
@@ -97,15 +96,12 @@ public class TheAngelProject extends CardBase implements IJumpBoost {
         }
         super.onUpdate(stack, worldIn, entityIn, itemSlot, isSelected);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.the_angel_project").getFormattedText());
         }
         else

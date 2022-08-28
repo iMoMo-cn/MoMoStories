@@ -10,7 +10,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import java.util.List;
-//血色卡利丹
 public class BloodColoredCalidan extends CardBase
 {
     static String key;
@@ -22,17 +21,12 @@ public class BloodColoredCalidan extends CardBase
         setCreativeTab(ModCreativeTab.TAB_NAME_2);
 
     }
-
-
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.YELLOW + new TextComponentTranslation("tooltip.blood_colored_calidan_2").getFormattedText());
         }
         else

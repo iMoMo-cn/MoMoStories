@@ -13,7 +13,6 @@ import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-//亲爱的卡莲
 public class DearKaren extends ItemBase {
     public DearKaren(String name) {
         super(name);
@@ -21,15 +20,12 @@ public class DearKaren extends ItemBase {
         setMaxStackSize(1);
         setCreativeTab(ModCreativeTab.TAB_NAME_4);
     }
-    //工具文本
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.DearKaren").getFormattedText());
         }
         else

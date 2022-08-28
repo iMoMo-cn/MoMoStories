@@ -12,7 +12,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 
 
-//恶魔之粹
 public class DemonEssence extends PotionBase {
     private static final String ATTACK_SPEED = "e5fd14f3-8053-c46a-53e0-bb19aa4ac17a";
     private static final String ARMOR = "d6e8145b-06de-4858-93fd-c089c6e1d453";
@@ -21,13 +20,9 @@ public class DemonEssence extends PotionBase {
     public DemonEssence(String name, boolean isBadEffect, int color, int icon) {
         super(name, isBadEffect, color, icon);
         setPotionName(MoMoFramework.MODID+".effect.demonessence");
-        //攻速
         registerPotionAttributeModifier(SharedMonsterAttributes.ATTACK_SPEED,ATTACK_SPEED ,6D,0);
-       // 护甲
         registerPotionAttributeModifier(SharedMonsterAttributes.ARMOR, ARMOR, 10, 0);
-        //攻击
         registerPotionAttributeModifier(SharedMonsterAttributes.ATTACK_DAMAGE, DAMAGE, 3.6D, 1);
-        //速度
         registerPotionAttributeModifier(SharedMonsterAttributes.MOVEMENT_SPEED,ATTACK_SPEED ,0.8D, 1);
     }
     @Override

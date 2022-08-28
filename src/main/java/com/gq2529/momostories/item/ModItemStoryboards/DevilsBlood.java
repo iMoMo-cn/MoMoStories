@@ -19,7 +19,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//魔鬼血液
 public class DevilsBlood extends CardBase
 {
     static String key;
@@ -48,7 +47,6 @@ public class DevilsBlood extends CardBase
             }
         }
     }
-    //工作台合成不消耗，返还物品
     @Nonnull
     @Override
     public ItemStack getContainerItem(ItemStack itemStack)
@@ -63,10 +61,8 @@ public class DevilsBlood extends CardBase
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-            //第一行，以此类推
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.devils_blood_3").getFormattedText());
         }
         else

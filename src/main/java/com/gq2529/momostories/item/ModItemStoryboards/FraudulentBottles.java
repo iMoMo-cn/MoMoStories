@@ -17,8 +17,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.Random;
-
-//欺诈之瓶
 public class FraudulentBottles extends CardBase
 {
     static String key;
@@ -35,7 +33,6 @@ public class FraudulentBottles extends CardBase
     {
         if ( !world.isRemote) {
             if (this == ModItems.FRAUDULENT_BOTTLES) {
-                //遍历背包
                 for (int i = 0; i < player.inventory.getSizeInventory(); ++i)
                 {
                     ItemStack itemStack = player.inventory.getStackInSlot(i);
@@ -44,9 +41,7 @@ public class FraudulentBottles extends CardBase
                         Random r = new Random();
                         int num = r.nextInt(2);
                         if(num > 0) {
-                            //删除物品
                             itemStack.shrink(1);
-                            //给玩家物品（灌木）
                             if(!player.inventory.addItemStackToInventory(new ItemStack(Blocks.DEADBUSH, 1)))
                             {
                                 player.entityDropItem(new ItemStack(Blocks.DEADBUSH, 1), 0);
@@ -56,7 +51,6 @@ public class FraudulentBottles extends CardBase
                         else
                             {
                             itemStack.shrink(1);
-                            //给玩家物品（假钻石）
                             if(!player.inventory.addItemStackToInventory(new ItemStack(ModItems.FAKE_DIAMOND, 2)))
                             {
                                 player.entityDropItem(new ItemStack(ModItems.FAKE_DIAMOND, 2), 0);
@@ -69,14 +63,11 @@ public class FraudulentBottles extends CardBase
         }
         return super.onItemRightClick(world, player, hand);
     }
-    //工具文本提示
     @Override
     public void addInformation(ItemStack stack, World world, List<String> tooltip, ITooltipFlag flag)
     {
-        //shift文本显示
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
-        //第一行，以此类推
         tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.fraudulent_bottles_3").getFormattedText());
         }
         else

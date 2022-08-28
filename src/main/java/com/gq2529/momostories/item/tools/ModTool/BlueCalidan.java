@@ -14,7 +14,6 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//蓝色卡利丹
 public class BlueCalidan extends ItemHoe implements IHasModel {
     private static final Item.ToolMaterial BOUNDLESS_MATERIAL = EnumHelper.addToolMaterial("boundless_material", 5, 3000, 8, 4, 9);
 
@@ -27,7 +26,6 @@ public class BlueCalidan extends ItemHoe implements IHasModel {
         setCreativeTab(ModCreativeTab.TAB_NAME_4);
     }
 
-    //框架特有
     @Override
     public void registerModels() {
         MoMoFramework.proxy.registerItemRenderer(this, 0, "inventory");

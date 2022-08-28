@@ -22,7 +22,6 @@ import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
-//帕劳德圣剑
 public class PalaudtheHolySword extends ItemSwordBase {
 
     private static final ToolMaterial BOUNDLESS_MATERIAL = EnumHelper.addToolMaterial("boundless_material", 5, -1, 8.0F, 8, 9);

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "momostories:items/palaud_the_holy_sword"
+  }
+}

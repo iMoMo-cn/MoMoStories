@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "momostories:items/lucy_the_axe"
+  }
+}

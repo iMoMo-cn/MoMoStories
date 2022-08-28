@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:id_quartz",
+      "count": 1
+    },
+    {
+      "item": "momostories:id_quartz",
+      "count": 1
+    },
+    {
+      "item": "momostories:id_quartz",
+      "count": 1
+    },
+    {
+      "item": "momostories:id_quartz",
+      "count": 1
+    },
+    {
+      "item": "minecraft:glass_bottle",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "momostories:id_sand",
+    "count": 1
+  }
+}

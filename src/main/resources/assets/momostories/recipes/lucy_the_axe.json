@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:lucy_the_axe_card",
+      "count": 1
+    },
+    {
+      "item": "minecraft:iron_axe",
+      "count": 1
+    }
+   ],
+
+  "result": {
+    "item": "momostories:lucy_the_axe",
+    "count": 1
+  }
+}

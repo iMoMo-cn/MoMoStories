@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:scavengers",
+      "count": 1
+    },
+    {
+      "item": "minecraft:fish",
+      "data": 3
+    }
+  ],
+  "result": {
+    "item": "momostories:mysterious_meatballs",
+    "count": 1
+  }
+}

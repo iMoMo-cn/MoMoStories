@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:reed",
+      "count": 1
+    },
+    {
+      "item": "minecraft:golden_apple",
+      "data": 1
+    }
+  ],
+  "result": {
+    "item": "momostories:wisereed",
+    "count": 1
+  }
+}

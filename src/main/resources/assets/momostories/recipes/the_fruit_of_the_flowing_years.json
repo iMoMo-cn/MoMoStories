@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:the_fruit_of_the_flowing_years_card",
+      "count": 1
+    },
+    {
+      "item": "momostories:the_book_of_manifestation",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "momostories:the_fruit_of_the_flowing_years",
+    "count": 1
+  }
+}

@@ -1,0 +1,273 @@
+#creativeTab
+itemGroup.momo_stories_nature=MoMo Stories-Nature
+itemGroup.momo_stories_mysterious=MoMo Stories-Mysterious
+itemGroup.momo_stories_interference=MoMo Stories-Interference
+itemGroup.momo_stories_implement=MoMo Stories-Implement
+
+
+
+#tishi
+tooltip.tishi=Press SHIFT to view ard information
+
+
+tile.id.name=Id Ore
+item.id_quartz.name=§eId Quartz
+item.id_sand.name=Id Sand
+
+
+
+
+#item
+item.daytime.name=§edaytime
+tooltip.daytime_2=(Daylight of Time Switching)
+DayTimeText=
+
+item.night.name=night
+tooltip.night_2=(Dark Night of Time Switching)
+NightText=
+
+item.adjudicator_balance.name=Adjudicator Balance
+tooltip.adjudicator_balance_4=
+
+item.soul_puppets.name=Soul Puppets
+tooltip.soul_puppets=
+item.the_book_of_forgery.name=The Book of Forgery
+tooltip.the_book_of_forgery=
+
+item.twist.name=Twist
+tooltip.twist_2=(When attacking, twisted creatures or holders)
+
+
+item.the_book_of_manifestation.name=§eThe Book of Manifestation
+tooltip.b_2=(Reproduce some of the card's items and special Id’s sandpaper)
+
+item.fine.name=Fine
+tooltip.fine_2=(Converted to sunny)
+FineText=
+
+item.dark_clouds.name=Dark Clouds
+tooltip.dark_clouds_2=(converted to rainy)
+DarkCloudsText=
+
+item.the_fruit_of_the_flowing_years.name=§eThe fruit of the flowing years
+tooltip.year_2=(Time can change everything, and it can change some items, Apple? Head? or Dragon's Breath? )
+
+item.the_fruit_of_the_flowing_years_card.name=The fruit of the flowing years card
+tooltip.the_fruit_of_the_flowing_years_card_1="The fruit of the southeast branch of the Tree of Origin also disappears after the departure of the explorers rescued by the Adherents"
+
+item.fraudulent_bottles.name=Fraudulent Bottles
+tooltip.fraudulent_bottles_3=(Just one diamond, right click, maybe will give you some special things)
+FraudulentBottlesText1=
+FraudulentBottlesText2=
+
+
+item.luna_hunting.name=Luna Hunting
+tooltip.luna_hunting_1="Absorb the moonlight and turn into arrows!"
+tooltip.luna_hunting_2=(Unbreakable bow and doesn't consume arrows at night)
+tooltip.luna_hunting_3=(Make sure there is at least one arrow in backpack)
+
+item.the_supreme_magi_deep_lake.name=The Supreme Magi Deep Lake
+tooltip.the_supreme=(1/2 chance of being sheltered when fatally injured)
+
+item.forgotten_ancient_mirrors.name=§eForgotten Ancient Mirrors
+tooltip.forgotten_ancient_mirrors_3=(Maybe you want to get this mirror through the Book of Manifestations)
+
+item.leyden_jar.name=Leyden jar
+tooltip.LeydenJar_3=(Attacks come with lightning and have special damage to undead creatures, but be careful not to hurt yourself by mistake)
+
+item.oham_heavy_cavalry_regiment.name=Oham Heavy Cavalry Regiment
+tooltip.oham_heavy_cavalry_regiment_2=(Gain heavy armor effect, increase armor value)
+
+item.church_of_the_sun_god.name=Church of the Sun God
+tooltip.church_of_the_sun_god_2=(Worship the Goddess of the Sun and receive the gift of the Goddess of the Sun)
+
+item.luna_church.name=Luna Church
+tooltip.luna_church_2=(Dedicated to the goddess of the moon, blessed by the goddess of the moon)
+
+item.blood_colored_calidan.name=Blood Colored Calidan
+tooltip.blood_colored_calidan_2=
+
+item.devils_blood.name=Devils Blood
+tooltip.devils_blood_3=
+
+item.lucy_the_axe_card.name=Lucy the Axe Card
+tooltip.lucy_the_axe_card=
+
+item.erin.name=Erin Wishes
+tooltip.ai_lings_wishes_4=
+
+item.garland_redemption.name=Garland Redemption
+tooltip.garland_redemption=
+
+
+item.fort_slim.name=Fort Slim
+tooltip.fort_slim_3=
+
+item.plague_doctor.name=Plague Doctor
+tooltip.plague_doctor_4=
+
+item.alchemist_medal.name=Alchemist Medal
+tooltip.alchemist_medal=
+
+item.freshman.name=Freshman
+tooltip.freshman_4=
+
+item.conscription_order.name=Conscription Order
+
+item.reed.name=Reed
+tooltip.reed_1=
+tooltip.reed_2=
+
+item.wisereed.name=
+tooltip.wisereed_1=
+tooltip.wisereed_2=
+
+item.scavengers.name=
+tooltip.scavengers=
+
+item.estes.name=estes
+tooltip.estes=
+
+item.the_angel_project.name=
+tooltip.the_angel_project=
+
+item.abyss_cloister.name=
+tooltip.abyss_cloister=
+
+item.bleeding.name=
+
+
+
+
+#item
+item.fake_diamond.name=Diamond
+item.id_sandpaper.name=Id Sandpaper
+item.mohe_ink.name=Mohe Ink
+item.letter_to_kerry.name=
+tooltip.LettertoKerry=
+item.dear_karen.name=
+tooltip.DearKaren=
+item.white_feathers.name=
+item.proof_of_glory_false.name=
+item.proof_of_glory.name=
+tooltip.proof_of_glory=
+tooltip.proof_of_glory_1=
+item.devils_blood_bucket.name=
+item.stone_powder.name=
+item.iron_powder.name=
+item.gold_powder.name=
+item.blue_calidan.name=Blue Calidan
+tooltip.luna_church=
+item.luna_blessing.name=Luna Blessing
+item.ordinary_hammer.name=Ordinary Hammer
+item.palaud_the_holy_sword.name=
+item.lucy_the_axe.name=Lucy the Axe
+tooltip.lucy_the_axe=
+item.ancient_mirrors.name=Ancient Mirrors
+tooltip.ancient_mirrors_1=
+tooltip.ancient_mirrors_2=
+tooltip.ancient_mirrors_3=
+tooltip.ancient_mirrors_4=
+
+item.replica_1.name=Replica No.1
+item.replica_2.name=Replica No.2
+item.replica_3.name=Replica No.3
+item.replica_4.name=Replica No.4
+
+item.mysterious_meatballs.name=
+tooltip.mysterious_meatballs=
+
+
+
+text1=
+
+
+#新伤害类型
+death.attack.SDAD=%1$s is distorted
+death.attack.thunder=%1$s killed by lightning
+death.attack.time=%1$sLost by time
+
+
+#BUFF
+momostories.effect.heavy_armor=Heavy Armor
+momostories.effect.demonessence=Demon Essence
+
+
+#LucyAxe
+lucy_the_axe.1=
+lucy_the_axe.2=
+lucy_the_axe.3=
+lucy_the_axe.4=
+lucy_the_axe.5=
+lucy_the_axe.6=
+lucy_the_axe.7=
+lucy_the_axe.8=
+lucy_the_axe.9=
+lucy_the_axe.10=
+lucy_the_axe.11=
+lucy_the_axe.12=
+lucy_the_axe.13=
+lucy_the_axe.14=
+lucy_the_axe.15=
+lucy_the_axe.16=
+lucy_the_axe.17=
+lucy_the_axe.18=
+lucy_the_axe.19=
+lucy_the_axe.20=
+lucy_the_axe.21=
+lucy_the_axe.22=
+lucy_the_axe.23=
+lucy_the_axe.24=
+lucy_the_axe.25=
+lucy_the_axe.26=
+lucy_the_axe.27=
+lucy_the_axe.28=
+lucy_the_axe.29=
+lucy_the_axe.30=
+lucy_the_axe.31=
+lucy_the_axe.32=
+lucy_the_axe.33=
+lucy_the_axe.34=
+lucy_the_axe.35=
+lucy_the_axe.36=
+lucy_the_axe.37=
+lucy_the_axe.38=
+lucy_the_axe.39=
+lucy_the_axe.40=
+
+
+EstesText1=
+TheSupremeMagiDeepLakeText1=
+
+
+
+
+
+
+
+
+#entity
+#entity.entity_name.name=block name
+#entity.Villager.modid.Villager_name=villager name
+
+#block
+#tile.block_name.name=block name
+
+#effect
+#effect.effect_name=effect name
+
+#potion
+#potion.effect.potion_name=potion_name
+#splash_potion.effect.potion_name=Splash Potion of potion_name
+#lingering_potion.effect.potion_name=Lingering Potion of potion_name
+
+#tipped arrow
+#tipped_arrow.effect.potion_name=Arrow of potion_name
+
+#advancements
+#advancements.modid.root.title=root name
+#advancements.modid.root.description=root description
+#advancements.modid.sub_name.title=sub name
+#advancements.modid.sub_name.description=sub description
+
+

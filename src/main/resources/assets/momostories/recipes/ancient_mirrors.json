@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients":
+  [
+    {
+      "item": "momostories:forgotten_ancient_mirrors",
+      "count": 1
+    },
+    {
+      "item": "momostories:the_book_of_manifestation",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "momostories:ancient_mirrors",
+    "count": 1
+  }
+}

@@ -18,6 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
 import javax.annotation.Nonnull;
 import java.util.List;
+
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class DevilsBlood extends CardBase
 {
@@ -30,6 +31,7 @@ public class DevilsBlood extends CardBase
         setContainerItem(this);
         setCreativeTab(ModCreativeTab.TAB_NAME_2);
     }
+
     @SubscribeEvent
     public static void devilsblood(LivingHurtEvent event) {
         World world = event.getEntity().world;
@@ -47,6 +49,7 @@ public class DevilsBlood extends CardBase
             }
         }
     }
+
     @Nonnull
     @Override
     public ItemStack getContainerItem(ItemStack itemStack)
@@ -56,7 +59,7 @@ public class DevilsBlood extends CardBase
         return stack;
 
     }
-    //工具文本
+
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)
@@ -70,7 +73,4 @@ public class DevilsBlood extends CardBase
             tooltip.add(TextFormatting.GOLD + new TextComponentTranslation("tooltip.tishi").getFormattedText());
         }
     }
-
-
-
 }

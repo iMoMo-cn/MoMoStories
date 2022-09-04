@@ -16,7 +16,7 @@
             setMaxStackSize(1);
 
             }
-    //检测shift
+    //shift
 
     public static void addInfo(ItemStack stack, List<String> list)
             {

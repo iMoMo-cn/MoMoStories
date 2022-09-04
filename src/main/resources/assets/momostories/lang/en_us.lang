@@ -39,6 +39,7 @@ tooltip.twist_2=(When attacking, twisted creatures or holders)
 
 
 item.the_book_of_manifestation.name=§eThe Book of Manifestation
+tooltip.b_1=
 tooltip.b_2=(Reproduce some of the card's items and special Id’s sandpaper)
 
 item.fine.name=Fine

@@ -2,9 +2,11 @@ package com.gq2529.momostories.item.ModItemStoryboards;
 import com.gq2529.momostories.init.ModCreativeTab;
 import com.gq2529.momostories.item.ModItems;
 import com.gq2529.momostories.item.tools.CardBase;
+import net.minecraft.block.Block;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
@@ -23,7 +25,6 @@ import java.util.Random;
 
 public class AdjudicatorBalance extends CardBase
 {
-    private static String key;
     public AdjudicatorBalance(String name)
     {
         super(name);
@@ -31,64 +32,67 @@ public class AdjudicatorBalance extends CardBase
         setMaxStackSize(1);
         setContainerItem(this);
     }
+
     @Nonnull
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
         ItemStack stack = itemStack.copy();
         stack.setCount(1);
         return stack;
-
     }
+
     @Nonnull
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-    {
+        {
         if (!player.world.isRemote)
         {
             if (this == ModItems.ADJUDICATOR_BALANCE)
             {
-                if (world.getBlockState(pos).getBlock() == Blocks.GOLD_ORE)
+                Block block = world.getBlockState(pos).getBlock();
+
+                if (block == Blocks.GOLD_ORE)
                 {
-                    world.setBlockState(pos, Blocks.DIAMOND_ORE.getDefaultState());
-                    return EnumActionResult.SUCCESS;
+                    SetBlock(world, pos, Blocks.DIAMOND_ORE);
                 }
-               else if (world.getBlockState(pos).getBlock() == Blocks.IRON_ORE)
+               else if (block == Blocks.IRON_ORE)
                 {
-                    world.setBlockState(pos, Blocks.REDSTONE_ORE.getDefaultState());
-                    return EnumActionResult.SUCCESS;
+                    SetBlock(world, pos, Blocks.REDSTONE_ORE);
                 }
-                else if (world.getBlockState(pos).getBlock() ==Blocks.STONE)
-            {
-                world.setBlockState(pos, Blocks.IRON_ORE.getDefaultState());
-                player.getCooldownTracker().setCooldown(player.getHeldItem(hand).getItem(), 20 );
-                return EnumActionResult.SUCCESS;
-            }
-               else if (world.getBlockState(pos).getBlock() ==Blocks.COAL_ORE)
+                else if (block == Blocks.STONE)
+                {
+                    Cooldown(player, hand, 20);
+                    SetBlock(world, pos, Blocks.IRON_ORE);
+                }
+                else if (block == Blocks.COAL_ORE)
                 {
                     Random r = new Random();
                     int num = r.nextInt(10) + 1;
-                    if (num >=1 && num<= 2)
-                    {
-                        world.setBlockState(pos, Blocks.DIAMOND_ORE.getDefaultState());
-                        return EnumActionResult.SUCCESS;
-                    }
-                  else  if (3<=num&&num<=10)
-                    {
-                    world.setBlockState(pos, Blocks.STONE.getDefaultState());
-                    return EnumActionResult.SUCCESS;
-                    }
+
+                    SetBlock(world, pos, num <= 2 ? Blocks.DIAMOND_ORE : Blocks.STONE);
                 }
-              else  if (world.getBlockState(pos).getBlock() ==Blocks.COAL_BLOCK)
+                else  if (block == Blocks.COAL_BLOCK)
                 {
-                    world.setBlockState(pos, Blocks.DIAMOND_ORE.getDefaultState());
-                    player.getCooldownTracker().setCooldown(player.getHeldItem(hand).getItem(), 40 );
-                    return EnumActionResult.SUCCESS;
+                    Cooldown(player, hand, 40);
+                    SetBlock(world, pos, Blocks.DIAMOND_ORE);
                 }
             }
         }
         return super.onItemUse(player, world, pos, hand, facing, hitX, hitY, hitZ);
     }
-    //工具文本
+
+    public EnumActionResult SetBlock(World worldIn, BlockPos pos, Block block)
+    {
+        worldIn.setBlockState(pos, block.getDefaultState());
+
+        return EnumActionResult.SUCCESS;
+    }
+
+    public void Cooldown(EntityPlayer player, EnumHand hand, int time)
+    {
+        player.getCooldownTracker().setCooldown(player.getHeldItem(hand).getItem(), time);
+    }
+
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, World player, List<String> tooltip, ITooltipFlag advanced)

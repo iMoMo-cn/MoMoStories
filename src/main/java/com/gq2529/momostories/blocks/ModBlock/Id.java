@@ -24,7 +24,7 @@ public class Id extends BlockBase
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return ModItems.Id_QUARTZ;
+        return ModItems.ID_QUARTZ;
     }
 
 

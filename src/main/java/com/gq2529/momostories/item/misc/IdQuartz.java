@@ -1,4 +1,4 @@
-package com.gq2529.momostories.item.shields;
+package com.gq2529.momostories.item.misc;
 
 import com.gq2529.momostories.init.ModCreativeTab;
 import com.gq2529.momostories.item.ItemBase;
